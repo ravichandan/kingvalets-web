@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    // background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('assets/images/DALL·E.jpeg');
+
+    background-image: url('assets/images/DALL·E.jpeg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: top top;   
+}
+
+// img {
+//     filter: brightness(50%);
+// }
