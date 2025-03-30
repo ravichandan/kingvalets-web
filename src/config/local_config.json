@@ -1,0 +1,9 @@
+{
+  "title": "King Valets",
+  "tag_line": "your royal service",
+  "host": "http://localhost:3000",
+  "urlPrefix": "/api",
+  "bucketAccessHost": "https://img.foodiex.com.au",
+  "waitingListEndpoint": "/joinWaitingList"
+  
+}

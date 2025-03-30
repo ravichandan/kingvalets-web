@@ -1,0 +1,8 @@
+{
+  "title": "King Valets",
+  "tag_line": "your royal service",
+  "host": "https://sea-lion-app-zmkac.ondigitalocean.app/foodie-service2",
+  "urlPrefix": "/api", 
+  "bucketAccessHost": "https://img.foodiex.com.au",
+  "waitingListEndpoint": "/places/:placeId"
+}
