@@ -4,6 +4,10 @@
   "host": "http://localhost:3000",
   "urlPrefix": "/api",
   "bucketAccessHost": "https://img.foodiex.com.au",
-  "waitingListEndpoint": "/joinWaitingList"
+  "waitingListEndpoint": "/joinWaitingList",
+
+  "contactUs": {
+    "label": "Limited spots!! Let us know your interest."
+  }
   
 }
