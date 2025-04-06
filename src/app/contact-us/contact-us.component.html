@@ -20,7 +20,7 @@
           placeholder="Phone number"
           formControlName="phone"
           id="phone"
-          required />
+          [attr.required]="isRequired(this.fg.controls['phone'])" />
         <!-- <small id="phoneHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
         <!-- <div class="invalid-feedback">we need your phone to contact you back.</div> -->
       </div>
@@ -35,7 +35,8 @@
           placeholder="Enter email"
           formControlName="email"
           id="email"
-          required />
+          [attr.required]="isRequired(this.fg.controls['email'])" 
+           />
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         <div class="invalid-feedback">we need your email to contact you back.</div>
       </div>

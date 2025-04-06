@@ -3,6 +3,7 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { join } from '@fireflysemantics/join';
 import { map, Subject, tap } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { Prospect } from '../models/Prospect';
 
 @Injectable({ providedIn: 'root' })
 export class AppService implements OnDestroy {
@@ -16,16 +17,15 @@ export class AppService implements OnDestroy {
     return environment;
   }
 
-  public joinWaitingList(data: any) {
-    console.log('In joingWaitingList');
+  public joinWaitingList(data: Prospect) {
+    console.log('In joinWaitingList');
     const headers = new HttpHeaders({
     //   'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
     });
 
     const url = join(this.getConfig().host, this.getConfig().waitingListEndpoint);
-    return this.http.get(url, { headers }).pipe(
-    //   map((items: any) => ({ data: items })),
+    return this.http.post(url, data, { headers }).pipe(
       tap((_: any) => console.log('joinWaitingList response:: '))
     );
   }

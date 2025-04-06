@@ -4,7 +4,7 @@
   "host": "https://sea-lion-app-zmkac.ondigitalocean.app/foodie-service2",
   "urlPrefix": "/api", 
   "bucketAccessHost": "https://img.foodiex.com.au",
-  "waitingListEndpoint": "/joinWaitingList",
+  "waitingListEndpoint": "/prospects",
 
   "contactUs": {
     "label": "Limited spots!! Let us know your interest."
