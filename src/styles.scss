@@ -7,6 +7,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
+html {
+  height: 100%;
+  min-height: 100%;
+}
 
 :root {
   font-synthesis: none;
@@ -19,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
-  min-height: 100vh;
+  // min-height: 100vh;
   //   font-family: "Inter", sans-serif;
   //   font-family:  Arial, Helvetica, sans-serif;
   //   font-family: 'Courier New', Courier, monospace;
@@ -36,12 +40,6 @@ body {
   //   font-family: cursive;
   //background-color: var(--surface-card);
 }
-// body {
-//   background-image: url("assets/images/DALL·E.jpeg");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: top top;
-// }
 
 body {
   // content:url("assets/images/DALL·E.jpeg");
@@ -53,24 +51,20 @@ body {
   position: relative;
 }
 
-html,
-body {
-  height: 100%;
-  min-height: 100%;
-}
 
-// img {
-//     filter: brightness(50%);
-// }
+
+.title{
+  text-shadow: rgb(116 116 116) 1px 0 10px;
+}
 
 .tag-title {
   font-family: none;
+  text-shadow: rgb(116 116 116) 1px 0 10px;
 }
 
 .contact-us-container {
-  // background-color: black;
-  height: 32rem;
-  max-width: 43rem;
+  height: 29rem;
+  max-width: 44rem;
 }
 
 .contact-us-wrapper {
@@ -85,4 +79,17 @@ body {
     height: 10em;
     width: 10em;
   }
+}
+
+.building-label {
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.2);
+  // height: 2.7rem;
+  // border: 1px solid red;
+  // color: white !important;
+  // padding: 5px;
+  // margin-bottom: 10px;
 }

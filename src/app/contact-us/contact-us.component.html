@@ -1,5 +1,5 @@
 @if (fg) {
-<div class=" text-light p-3 p-md-5 rounded-4  h-100 contact-us-wrapper">
+<div class=" text-light p-3 p-md-5 rounded-4 h-100 contact-us-wrapper">
   <div class="mb-5">
     <span class=" text-center h3 fw-bold">{{ config.contactUs.label }}</span>
   </div>
@@ -8,10 +8,10 @@
     [formGroup]="fg"
     #contactUsForm
     (ngSubmit)="onSubmit(fg.value)"
-    class="row gap-4 needs-validation"
+    class="row gap-3 needs-validation"
     novalidate
   >
-    <div class="form-group col-12 col-md-8">
+    <div class="form-group col-12 ">
       <label for="phone">Phone</label>
       <input
         type="tel"
@@ -26,7 +26,7 @@
       <!-- <div class="invalid-feedback">we need your phone to contact you back.</div> -->
     </div>
     <span class="h4">or</span>
-    <div class="form-group col-12 col-md-8">
+    <div class="form-group col-12 ">
       <label for="email">Email</label>
       <input
         type="email"
@@ -37,14 +37,14 @@
         formControlName="email"
         id="email"
       />
-      <small id="emailHelp" class="form-text text-muted"
-        >We'll never share your email with anyone else.</small
-      >
-      @if (this.fg.hasError('atLeastOne')) {<span class="invalid-feedback"
-        >We need email or phone</span
-      >}
     </div>
-    <div class="form-group col-12 col-md-8 d-flex">
+
+    
+    <div class="col-12 mb-2" style="min-height: 2.7rem;">@if (fg.touched && fg.hasError('atLeastOne')) {<span class="error-message p-2  d-inline-block w-100 border border-danger rounded-2"
+        >We need either email or phone</span
+      >}</div>
+    
+    <div class="form-group col-12 d-flex">
       <button type="submit" class="btn btn-primary flex-grow-1">Send</button>
     </div>
   </form>
