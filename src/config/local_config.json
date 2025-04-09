@@ -5,9 +5,14 @@
   "urlPrefix": "/api",
   "bucketAccessHost": "https://img.foodiex.com.au",
   "waitingListEndpoint": "/prospects",
-
   "contactUs": {
-    "label": "Limited spots!! Let us know your interest."
+    "label": "Limited spots!! Let us know your interest.",
+    "acknowledgement": "Thank you for showing interest. You will be one of the first customers we serve."
+  },
+  "labels":{
+    "aboutus": "Who are we?",
+    "contactus": "Contact us",
+    "team": "Our team",
+    "building": "The website is still under construction. We will be ready to serve you from June 2025. Meanwhile let us know below if you would use this service."
   }
-  
 }

@@ -5,6 +5,7 @@ html {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 :root {
@@ -35,11 +36,20 @@ body {
   //   font-family: cursive;
   //background-color: var(--surface-card);
 }
+// body {
+//   background-image: url("assets/images/DALL·E.jpeg");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: top top;
+// }
+
 body {
+  // content:url("assets/images/DALL·E.jpeg");
   background-image: url("assets/images/DALL·E.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top top;
+  background-position: top;
+  position: relative;
 }
 
 html,
@@ -57,7 +67,14 @@ body {
 }
 
 .contact-us-container {
-  background-color: black;
+  // background-color: black;
+  height: 32rem;
+  max-width: 43rem;
+}
+
+.contact-us-wrapper {
+  background-color: rgb(0, 0, 0, 0.6) !important;
+  background-blend-mode: lighten;
 }
 
 .setting-icon {

@@ -1,50 +1,59 @@
 @if (fg) {
-  <div class="container text-light p-5 rounded-4 opacity-75 contact-us-container">
-    <span class="text-center mb-5 h3">{{config.contactUs.label}}</span>
-    <form
-      [formGroup]="fg"
-      #contactUsForm
-      (ngSubmit)="onSubmit(fg.value)"
-      class="row gap-4 py-4 needs-validation"
-      novalidate>
-      <!--      <div class="row gap-4 py-4">-->
-      <!--      <div class=" col-12">-->
-
-      <div class="form-group col-12 col-md-8">
-        <label for="phone">Phone</label>
-        <input
-          type="tel"
-          class="form-control"
-          name="phone"
-          aria-describedby="phoneHelp"
-          placeholder="Phone number"
-          formControlName="phone"
-          id="phone"
-          [attr.required]="isRequired(this.fg.controls['phone'])" />
-        <!-- <small id="phoneHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-        <!-- <div class="invalid-feedback">we need your phone to contact you back.</div> -->
-      </div>
-      <span class="h4">or</span>
-      <div class="form-group col-12 col-md-8">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          name="email"
-          aria-describedby="emailHelp"
-          placeholder="Enter email"
-          formControlName="email"
-          id="email"
-          [attr.required]="isRequired(this.fg.controls['email'])" 
-           />
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        <div class="invalid-feedback">we need your email to contact you back.</div>
-      </div>
-      
-      <div class="form-group col-12 col-md-8 d-flex">
-        <button type="submit" class="btn btn-primary flex-grow-1">Send</button>
-      </div>
-    </form>
-    <!--    </div>-->
+<div class=" text-light p-3 p-md-5 rounded-4  h-100 contact-us-wrapper">
+  <div class="mb-5">
+    <span class=" text-center h3 fw-bold">{{ config.contactUs.label }}</span>
   </div>
+  @if(!isSubmitted) {
+  <form
+    [formGroup]="fg"
+    #contactUsForm
+    (ngSubmit)="onSubmit(fg.value)"
+    class="row gap-4 needs-validation"
+    novalidate
+  >
+    <div class="form-group col-12 col-md-8">
+      <label for="phone">Phone</label>
+      <input
+        type="tel"
+        class="form-control"
+        name="phone"
+        aria-describedby="phoneHelp"
+        placeholder="Phone number"
+        formControlName="phone"
+        id="phone"
+      />
+      <!-- <small id="phoneHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      <!-- <div class="invalid-feedback">we need your phone to contact you back.</div> -->
+    </div>
+    <span class="h4">or</span>
+    <div class="form-group col-12 col-md-8">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        formControlName="email"
+        id="email"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
+      @if (this.fg.hasError('atLeastOne')) {<span class="invalid-feedback"
+        >We need email or phone</span
+      >}
+    </div>
+    <div class="form-group col-12 col-md-8 d-flex">
+      <button type="submit" class="btn btn-primary flex-grow-1">Send</button>
+    </div>
+  </form>
+  } @else {
+  <div class="acknowledgement-block">
+    <span class="text-center mb-5 h3">{{
+      config.contactUs.acknowledgement
+    }}</span>
+  </div>
+  }
+</div>
 }
