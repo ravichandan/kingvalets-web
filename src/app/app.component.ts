@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+// import { HomeComponent } from './home/home.component';
 import { AppService } from './services/app.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ContactUsComponent, RouterLink],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

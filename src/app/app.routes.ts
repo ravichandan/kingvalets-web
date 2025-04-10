@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { MissionComponent } from './mission/mission.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
   {
@@ -17,7 +18,7 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component: AppComponent,
+    component: HomeComponent,
   },
   {
     path: 'mission',

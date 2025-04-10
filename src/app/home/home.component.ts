@@ -4,22 +4,21 @@ import { AppService } from '../services/app.service';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-contact-us',
+  selector: 'app-home',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './contact-us.component.html',
-  styleUrl: './contact-us.component.scss',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
-export class ContactUsComponent implements OnDestroy, OnInit {
-
+export class HomeComponent implements OnDestroy, OnInit {
 
   private readonly destroy$: Subject<any>;
   config: any;
 
   fg: FormGroup | undefined;
 
-  @ViewChild('contactUsForm')
-  contactUsForm!: ElementRef;
+  @ViewChild('homeForm')
+  homeForm!: ElementRef;
 
   isSubmitted: boolean = false;
 
@@ -43,14 +42,14 @@ export class ContactUsComponent implements OnDestroy, OnInit {
 
     console.log('this.fg.valid ', this.fg?.valid);
     console.log('this.fg.hasError ', this.fg?.hasError('atLeastOne'));
-    console.log('contact-us.component->onSubmit(), data:: ', data);
+    console.log('home.component->onSubmit(), data:: ', data);
     
     if (!this.fg?.valid) {
-      this.contactUsForm.nativeElement.classList.add('was-validated');
+      this.homeForm.nativeElement.classList.add('was-validated');
     } else {
       this.isSubmitted = true;
       // this.appService.joinWaitingList(data).subscribe();;
-      // this.contactUsForm.nativeElement.submit();
+      // this.homeForm.nativeElement.submit();
     }
   }
 

@@ -45,10 +45,13 @@ body {
   // content:url("assets/images/DALL·E.jpeg");
   // background-image: url("assets/images/DALL·E.jpeg");
   background-image: url("assets/images/dalle2.jpg");
-  background-size: cover;
+  // background-size: cover;
+  // background-size: 43rem 84rem;
+  background-size: calc(max(100%, 1000px));
   background-repeat: no-repeat;
   background-position: top;
   position: relative;
+  min-height: -webkit-fill-available;
 }
 
 .title{
@@ -57,6 +60,10 @@ body {
 
 .tag-title {
   font-family: none;
+  text-shadow: rgb(116 116 116) 1px 0 10px;
+}
+
+.text-shadow {
   text-shadow: rgb(116 116 116) 1px 0 10px;
 }
 
@@ -80,6 +87,10 @@ body {
 
 .building-label {
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .error-message {

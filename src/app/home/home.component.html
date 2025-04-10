@@ -1,0 +1,98 @@
+<div class="row gap-4 ">
+  <div class="row">
+    <div class="col text-center setting-icon">
+      <!-- <img src="assets/images/settings3.gif" > -->
+      <span class="fx-icon fx-icon-settings slowly-rotate"></span>
+      <span
+        class="fx-icon fx-icon-settings slowly-rotate-anti"
+        style="height: 5em; width: 5em; animation-delay: 300ms"
+      ></span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-justify">
+      <span class="mx-2 my-1 fs-3 fw-medium building-label">{{
+        config.labels.building
+      }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="divider" role="separator" aria-label="Divider"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <div class="contact-us-container">
+        <!-- <app-contact-us></app-contact-us> -->
+
+        @if (fg) {
+        <div class="text-light p-3 p-md-5 rounded-4 h-100 contact-us-wrapper">
+          <div class="mb-5">
+            <span class="text-center h3 fw-bold">{{
+              config.contactUs.label
+            }}</span>
+          </div>
+          @if(!isSubmitted) {
+          <form
+            [formGroup]="fg"
+            #contactUsForm
+            (ngSubmit)="onSubmit(fg.value)"
+            class="row gap-3 needs-validation"
+            novalidate
+          >
+            <div class="form-group col-12">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                class="form-control"
+                name="phone"
+                aria-describedby="phoneHelp"
+                placeholder="Phone number"
+                formControlName="phone"
+                id="phone"
+              />
+              <!-- <small id="phoneHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              <!-- <div class="invalid-feedback">we need your phone to contact you back.</div> -->
+            </div>
+            <span class="h4">or</span>
+            <div class="form-group col-12">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                formControlName="email"
+                id="email"
+              />
+            </div>
+
+            <div class="col-12 mb-2" style="min-height: 2.7rem">
+              @if (fg.touched && fg.hasError('atLeastOne')) {<span
+                class="error-message p-2 d-inline-block w-100 border border-danger rounded-2"
+                >We need either email or phone</span
+              >}
+            </div>
+
+            <div class="form-group col-12 d-flex">
+              <button type="submit" class="btn btn-primary flex-grow-1">
+                Send
+              </button>
+            </div>
+          </form>
+          } @else {
+          <div class="acknowledgement-block">
+            <span class="text-center mb-5 h3">{{
+              config.contactUs.acknowledgement
+            }}</span>
+          </div>
+          }
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
