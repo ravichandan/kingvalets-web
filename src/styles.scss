@@ -52,6 +52,7 @@ body {
   background-position: top;
   position: relative;
   min-height: -webkit-fill-available;
+  background-color: black;
 }
 
 .title{
@@ -77,6 +78,10 @@ body {
   background-blend-mode: lighten;
 }
 
+.home-process {
+  background-color: rgb(0, 0, 0, 0.4) !important;
+  background-blend-mode: lighten;  
+}
 .setting-icon {
   span {
     mask-size: contain;
