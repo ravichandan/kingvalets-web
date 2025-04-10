@@ -51,8 +51,6 @@ body {
   position: relative;
 }
 
-
-
 .title{
   text-shadow: rgb(116 116 116) 1px 0 10px;
 }
@@ -75,7 +73,6 @@ body {
 .setting-icon {
   span {
     mask-size: contain;
-
     height: 10em;
     width: 10em;
   }
@@ -92,4 +89,30 @@ body {
   // color: white !important;
   // padding: 5px;
   // margin-bottom: 10px;
+}
+
+.slowly-rotate {
+  animation: clockwise 6s linear infinite;
+}
+
+.slowly-rotate-anti {
+  animation: anticlockwise 3s linear infinite;
+}
+
+@keyframes clockwise {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwise {
+  from {
+      transform: rotate(270deg);
+  }
+  to {
+      transform: rotate(90deg);
+  }
 }

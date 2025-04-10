@@ -3,7 +3,9 @@
     <div class="row mb-5"></div>
     <div class="row">
       <div class="col-12 text-end">
-        <span class="display-1 ms-auto fw-bolder title">{{ config.title }}</span>
+        <span class="display-1 ms-auto fw-bolder title">{{
+          config.title
+        }}</span>
       </div>
       <div class="col-12 text-end">
         <span class="h4 strong fst-italic tag-title">{{
@@ -13,13 +15,19 @@
     </div>
     <div class="row">
       <div class="col text-center setting-icon">
-        <img src="assets/images/settings3.gif" >
-        <!-- <span class="fx-icon fx-icon-settings"></span> -->
+        <!-- <img src="assets/images/settings3.gif" > -->
+        <span class="fx-icon fx-icon-settings slowly-rotate"></span>
+        <span
+          class="fx-icon fx-icon-settings slowly-rotate-anti"
+          style="height: 5em; width: 5em; animation-delay: 300ms;"
+        ></span>
       </div>
     </div>
     <div class="row">
-      <div class="col text-center ">
-        <span class="mx-2 my-1 fs-3 fw-medium building-label">{{ config.labels.building }}</span>
+      <div class="col text-center">
+        <span class="mx-2 my-1 fs-3 fw-medium building-label">{{
+          config.labels.building
+        }}</span>
       </div>
     </div>
     <div class="row">
@@ -39,9 +47,27 @@
         <div class="footer mb-5">
           <footer>
             <div class="d-flex flex-column flex-md-row fw-bold fs-5">
-              <span class="mx-3 my-1">{{ config.labels.aboutus }}</span>
-              <span class="mx-3 my-1">{{ config.labels.team }}</span>
-              <span class="mx-3 my-1">{{ config.labels.contactus }}</span>
+              <a
+                class="text-light link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                [routerLink]="['/mission']"
+                routerLinkActive="router-link-active"
+              >
+                <span class="mx-3 my-1">{{ config.labels.aboutus }}</span>
+              </a>
+              <a
+                class="text-light link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                [routerLink]="['/how-it-works']"
+                routerLinkActive="router-link-active"
+              >
+                <span class="mx-3 my-1">{{ config.labels.team }}</span>
+              </a>
+              <a
+                class="text-light link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                [routerLink]="['/contact-us']"
+                routerLinkActive="router-link-active"
+              >
+                <span class="mx-3 my-1">{{ config.labels.contactus }}</span>
+              </a>
             </div>
           </footer>
         </div>
