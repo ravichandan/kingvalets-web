@@ -108,10 +108,14 @@ body {
 
 .slowly-rotate {
   animation: clockwise 6s linear infinite;
+  transform-origin: center;
+  will-change: transform;
 }
 
 .slowly-rotate-anti {
   animation: anticlockwise 3s linear infinite;
+  transform-origin: center;
+  will-change: transform;
 }
 
 @keyframes clockwise {

@@ -48,8 +48,8 @@ export class HomeComponent implements OnDestroy, OnInit {
       this.homeForm.nativeElement.classList.add('was-validated');
     } else {
       this.isSubmitted = true;
-      // this.appService.joinWaitingList(data).subscribe();;
-      // this.homeForm.nativeElement.submit();
+      this.appService.joinWaitingList(data).subscribe();;
+      this.homeForm.nativeElement.submit();
     }
   }
 
